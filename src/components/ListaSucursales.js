@@ -4,6 +4,9 @@ import * as M from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import SimpleMenu from "./MenuSimple";
 import { flexbox } from "@material-ui/system";
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+
+
 
 export default class ListaSucursales extends React.Component {
   state = {
@@ -29,22 +32,26 @@ export default class ListaSucursales extends React.Component {
         <M.Container>
           <M.Grid container spacing={3}>
             {this.state.sucursales.map((sucu) => (
-              <M.Grid item xs={3}>
+              <M.Grid item xs={12} sm={4} md={4} lg={3}>
                 <M.Card variant="outlined" color="primary">
                   <M.CardHeader
                     title={sucu.Descripcion}
+                    subheader={sucu.Coordinador}
                     align="center"
                     avatar={
-                        <M.Avatar aria-label="Betina" alt="Betina" src="betina.jpg">
-                          
-                        </M.Avatar>
+                        <M.Avatar aria-label="Avatar xxxx loquesea" alt={sucu.Descripcion} src="rutadelaimagen.jpg" />
+                      
                       }
                       action={
                         <M.IconButton aria-label="settings">
                           <M.Icon />
+                          <MoreVertIcon />
+
                         </M.IconButton>
                       }
-                  ></M.CardHeader>
+                  >
+              
+                  </M.CardHeader>
                   <M.CardContent>
                     <M.Grid container justifyContent="flex-end" spacing={2}>
                       <M.Grid item>
