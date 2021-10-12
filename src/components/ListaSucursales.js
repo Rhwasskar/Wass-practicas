@@ -14,6 +14,19 @@ export default class ListaSucursales extends React.Component {
   };
 
   componentDidMount() {
+    // const obtenerSucursales = async() => {
+    //   try{
+
+    //     const res = await axios.get('https://5d86882acd71160014aae73b.mockapi.io/api/sucursales/')
+    //     console.log(res)
+    //     const sucursales = await res.data;
+    //     console.log(sucursales)
+    //     // const a = await sucursales.then (this.setState({ sucursales}))
+
+    //   } catch (error){
+    //     console.log(error);
+    //   }
+    // }
     axios
       .get(`https://5d86882acd71160014aae73b.mockapi.io/api/sucursales`)
       .then((res) => {
